@@ -1,0 +1,26 @@
+{
+  "name": "custom-computer-builder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProgHarrison234/custom-computer-builder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProgHarrison234/custom-computer-builder/issues"
+  },
+  "homepage": "https://github.com/ProgHarrison234/custom-computer-builder#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "mysql": "^2.18.1",
+    "sequelize": "^6.2.4"
+  }
+}
