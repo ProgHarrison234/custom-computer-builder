@@ -1,3 +1,4 @@
+
 "use strict";
 
 let fs = require("fs");
@@ -10,6 +11,7 @@ let db = {};
 
 if (config.use_env_letiable) {
   var sequelize = new Sequelize(process.env[config.use_env_letiable]);
+
 } else {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
@@ -17,12 +19,13 @@ if (config.use_env_letiable) {
 fs
   .readdirSync(__dirname)
   .filter(function(file) {
-    return (file.indexOf(".") !== 0) && (file !== basename) && (file.slice(-3) === ".js");
+   return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
   })
-  // .forEach(function(file) {
-  //   let model = sequelize["import"](path.join(__dirname, file));
-  //   db[model.name] = model;
-  // });
+  .forEach(function(file) {
+    var model = sequelize['import'](path.join(__dirname, file));
+    db[model.name] = model;
+  });
+
 
 Object.keys(db).forEach(function(modelName) {
   if (db[modelName].associate) {
