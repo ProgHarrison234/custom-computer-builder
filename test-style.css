@@ -1,0 +1,47 @@
+header {
+    background-image: url("./Pictures/deskpc.jpg");
+    background-repeat: no-repeat;
+    height: 584px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+.header-select {
+    display: inline;
+    font-size: 2.5rem;
+    margin: 75px;
+}
+#system-design {
+    margin-left: -10%;
+}
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.proccessor-dd {
+    width: 100%;
+}
+
+.end-btns {
+    background-color: #2C3539;
+    color: white;
+    text-align: center;
+}
+
+footer {
+    margin-top: 5%;
+    background-color: dimgrey;
+    color: white;
+    text-align: center;
+    height: 200px;
+    width: 100%;
+}
