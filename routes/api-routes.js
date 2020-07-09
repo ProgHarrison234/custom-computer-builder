@@ -1,76 +1,76 @@
-let db = require("../models/index");
+let db = require("../models");
 
 module.exports = function(app) {
 
-  app.get("/api/gaming", function(req, res) {
-    db.Product.findAll({})
-      .then(function(dbProduct) {
-        console.table(dbProduct);
-        res.json(dbProduct);
+  app.get("/", function(req, res) {
+    db.Component.findAll({})
+      .then(function(dbComponent) {
+        console.table(dbComponent);
+        res.json(dbComponent);
       });
   });
 
-  // app.get("/api/gaming/:id", function(req, res) {
-  //   db.Product.findOne({
+  // app.get("/:id", function(req, res) {
+  //   db.Component.findOne({
   //     where: {
   //       id: req.params.id
   //     }
   //   })
-  //     .then(function(dbProduct) {
-  //       res.json(dbProduct);
+  //     .then(function(dbComponent) {
+  //       res.json(dbComponent);
   //     });
   // });
 
-  // The post route needs work. This is built for saving a created product, but we need to post from the db.
+  // The post route needs work. This is built for saving a created Component, but we need to post from the db.
   // app.post("/api/gaming", function(req, res) {
   //   console.log(req.body);
-  //   db.Product.create({
+  //   db.Component.create({
   //     component: req.body.component,
   //     name: req.body.name,
   //     description: req.body.description,
   //     price: req.body.price,
   //     rating: req.body.rating
   //   })
-  //     .then(function(dbProduct) {
-  //       res.json(dbProduct);
+  //     .then(function(dbComponent) {
+  //       res.json(dbComponent);
   //     });
   // });
 
-  // app.Product("/api/gaming", function(req, res) {
+  // app.Component("/api/gaming", function(req, res) {
   //   console.log(req.body);
-  //   db.Product.create({
+  //   db.Component.create({
   //       component: req.body.component,
   //       name: req.body.name,
   //       description: req.body.description,
   //       price: req.body.price,
   //       rating: req.body.rating
   //     })
-  //     .then(function(dbProduct) {
-  //       res.json(dbProduct);
+  //     .then(function(dbComponent) {
+  //       res.json(dbComponent);
   //     });
   // });
 
   // app.delete("/api/gaming/:id", function(req, res) {
-  //   db.Product.destroy({
+  //   db.Component.destroy({
   //     where: {
   //       id: req.params.id
   //     }
   //   })
-  //     .then(function(dbProduct) {
-  //       res.json(dbProduct);
+  //     .then(function(dbComponent) {
+  //       res.json(dbComponent);
   //     });
   // });
 
 // I don't think we need this.  
 //   app.put("/api/gaming", function(req, res) {
-//     db.Product.update(req.body,
+//     db.Component.update(req.body,
 //       {
 //         where: {
 //           id: req.body.id
 //         }
 //       })
-//       .then(function(dbProducts) {
-//         res.json(dbProducts);
+//       .then(function(dbComponent) {
+//         res.json(dbComponent);
 //       });
 //   });
 };

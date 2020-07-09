@@ -4,6 +4,7 @@ let app = express();
 let PORT = process.env.PORT || 8080;
 
 let db = require("./models");
+db.Component.sync();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
