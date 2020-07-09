@@ -1,7 +1,4 @@
-
-// Requiring our models and passport as we've configured it
-const db = require("../models");
-const passport = require("../config/passport");
+let db = require("../models");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -15,41 +12,75 @@ module.exports = function(app) {
     });
   });
 
-  // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
-  // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
-  // otherwise send back an error
-  app.post("/api/signup", (req, res) => {
-    db.User.create({
-      email: req.body.email,
-      password: req.body.password
-    })
-      .then(() => {
-        res.redirect(307, "/api/login");
-      })
-      .catch(err => {
-        res.status(401).json(err);
+  app.get("/", function(req, res) {
+    db.Component.findAll({})
+      .then(function(dbComponent) {
+        console.table(dbComponent);
+        res.json(dbComponent);
       });
   });
 
-  // Route for logging user out
-  app.get("/logout", (req, res) => {
-    req.logout();
-    res.redirect("/");
-  });
+  // app.get("/:id", function(req, res) {
+  //   db.Component.findOne({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   })
+  //     .then(function(dbComponent) {
+  //       res.json(dbComponent);
+  //     });
+  // });
 
-  // Route for getting some data about our user to be used client side
-  app.get("/api/user_data", (req, res) => {
-    if (!req.user) {
-      // The user is not logged in, send back an empty object
-      res.json({});
-    } else {
-      // Otherwise send back the user's email and id
-      // Sending back a password, even a hashed password, isn't a good idea
-      res.json({
-        email: req.user.email,
-        id: req.user.id
-      });
-    }
-  });
+  // The post route needs work. This is built for saving a created Component, but we need to post from the db.
+  // app.post("/api/gaming", function(req, res) {
+  //   console.log(req.body);
+  //   db.Component.create({
+  //     component: req.body.component,
+  //     name: req.body.name,
+  //     description: req.body.description,
+  //     price: req.body.price,
+  //     rating: req.body.rating
+  //   })
+  //     .then(function(dbComponent) {
+  //       res.json(dbComponent);
+  //     });
+  // });
 
+  // app.Component("/api/gaming", function(req, res) {
+  //   console.log(req.body);
+  //   db.Component.create({
+  //       component: req.body.component,
+  //       name: req.body.name,
+  //       description: req.body.description,
+  //       price: req.body.price,
+  //       rating: req.body.rating
+  //     })
+  //     .then(function(dbComponent) {
+  //       res.json(dbComponent);
+  //     });
+  // });
+
+  // app.delete("/api/gaming/:id", function(req, res) {
+  //   db.Component.destroy({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   })
+  //     .then(function(dbComponent) {
+  //       res.json(dbComponent);
+  //     });
+  // });
+
+// I don't think we need this.  
+//   app.put("/api/gaming", function(req, res) {
+//     db.Component.update(req.body,
+//       {
+//         where: {
+//           id: req.body.id
+//         }
+//       })
+//       .then(function(dbComponent) {
+//         res.json(dbComponent);
+//       });
+//   });
 };
