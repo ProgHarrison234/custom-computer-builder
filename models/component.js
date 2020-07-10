@@ -1,55 +1,27 @@
 module.exports = function (sequelize, DataTypes) {
   let Component = sequelize.define("Component", {
-    central_processor: {
+    component: {
       type: DataTypes.TEXT,
       allowNull: false,
       validate: {
         len: [100]
       }
     },
-    cpu_cooler: {
+    description: {
       type: DataTypes.TEXT,
       allowNull: false,
       validate: {
         len: [100]
       }
     },
-    motherboard: {
+    manufacturer: {
       type: DataTypes.TEXT,
       allowNull: false,
       validate: {
         len: [100]
       }
     },
-    ram: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      validate: {
-        len: [100]
-      }
-    },
-    storage: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      validate: {
-        len: [100]
-      }
-    },
-    graphics_processor: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      validate: {
-        len: [100]
-      }
-    },
-    power_supply: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      validate: {
-        len: [100]
-      }
-    },
-    case: {
+    socket: {
       type: DataTypes.TEXT,
       allowNull: false,
       validate: {
@@ -77,7 +49,7 @@ module.exports = function (sequelize, DataTypes) {
         len: [100]
       }
     },
-    rank: {
+    ranking: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
