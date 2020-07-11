@@ -2,8 +2,8 @@
 
   "development": {
     "username": "root",
-    "password": null,
-    "database": "passport_demo",
+    "password": "MotoFun0814!",
+    "database": "cc_builder",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
