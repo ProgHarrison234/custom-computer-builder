@@ -64,6 +64,18 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false
     }
+  },
+  {
+    sequelize,
+  
+    // don't forget to enable timestamps!
+    timestamps: true,
+  
+    // I don't want createdAt
+    createdAt: false,
+  
+    // I want updatedAt to actually be called updateTimestamp
+    updatedAt: false
   });
   return Component;
 };

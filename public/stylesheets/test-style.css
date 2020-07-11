@@ -1,0 +1,79 @@
+header {
+    background-image: url("../Pictures/pc.jpg");
+    background-repeat: no-repeat;
+    height: 584px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+a {
+    color: white;
+}
+
+#logo {
+    color: white;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+.header-select {
+    color: white;
+    display: inline;
+    font-size: 2.5rem;
+    margin: 75px;
+}
+#system-design {
+    margin-left: 0%;
+}
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+#build-start {
+    margin-left: 0%;
+}
+
+.build {
+    display: inline;
+    margin-right: 10%;
+}
+
+#chosen-one {
+    margin-right: 20%;
+}
+
+/* #chosen-comp {
+    margin-left: -30%;
+    margin-right: 20%;
+}
+
+.chosen {
+    display: inline;
+    margin-right: 10%;
+}
+
+/* #chosen-one {
+    margin-right: 20%;
+} */
+
+.end-btns {
+    background-color: #2C3539;
+    color: white;
+    text-align: center;
+}
+
+footer {
+    margin-top: 5%;
+    background-color: dimgrey;
+    color: white;
+    text-align: center;
+    height: 200px;
+    width: 100%;
+}
