@@ -63,6 +63,14 @@ module.exports = function(app) {
         res.json(dbComponent);
       });
   })
+
+  app.post("/api/builds", function(req, res) {
+    console.log(JSON.stringify(req.body))
+    res.end();
+    // db.Component.create({
+    //   console.log(req)
+    // })
+  })
   // app.get("/api/components/workstation-pc", function(req, res) {
   //   db.Component.findAll({
   //     where: {
