@@ -1,21 +1,24 @@
 {
 
   "development": {
-    "username": "root",
-    "password": "MotoFun0814!",
-    "database": "cc_builder",
-    "host": "127.0.0.1",
+    "username": "girhp8d9dcudt9iz",
+    "password": "o8j1kie4nsowulii",
+    "database": "ysfelt37ww9n82b0",
+    "host": "e11wl4mksauxgu1w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "username": "girhp8d9dcudt9iz",
+    "password": "o8j1kie4nsowulii",
+    "database": "ysfelt37ww9n82b0",
+    "host": "e11wl4mksauxgu1w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "JAWSDB_URL",
+    "username": "girhp8d9dcudt9iz",
+    "password": "o8j1kie4nsowulii",
+    "database": "ysfelt37ww9n82b0",
+    "host": "e11wl4mksauxgu1w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
