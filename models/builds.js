@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
     let Builds = sequelize.define("Builds", {
-        part_id: {
+        CPU_part_id: {
             type: DataTypes.INTEGER,
             allowNull: false
         },

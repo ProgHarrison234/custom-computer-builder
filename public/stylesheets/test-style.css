@@ -36,6 +36,11 @@ h3 {
     font-size: 1.5rem;
 }
 
+#your-pc {
+    margin-top: 8%;
+    margin-left: 25%;
+}
+
 #build-start {
     margin-left: 0%;
 }
@@ -62,7 +67,15 @@ h3 {
 /* #chosen-one {
     margin-right: 20%;
 } */
+#message {
+    font-size: xx-large;
+    font-weight: bolder;
+    color: green;
+}
 
+.columnPart {
+    background-color: #dfdfdf;
+}
 .end-btns {
     background-color: #2C3539;
     color: white;
