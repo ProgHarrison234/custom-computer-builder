@@ -64,8 +64,14 @@ module.exports = function(app) {
       });
   })
 
+  app.get("/api/create-build/:cpu/:cooler/:motherboard/:ram/:storage/:card/:psu/:compcase", function(req, res) {
+    let { cpu, cooler, motherboard, ram, storage, card, psu, compcase } =   req.params;
+    console.log(JSON.stringify(req.params, null, 2));
+//     db.Builds.create({}) TODO finish me
+  })
+
   app.post("/api/builds", function(req, res) {
-    console.log(JSON.stringify(req.body))
+    console.log(req.body)
     res.end();
     // db.Component.create({
     //   console.log(req)
